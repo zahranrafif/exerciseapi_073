@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_api/controller/kategori_barang_controller.dart';
 import 'package:flutter_api/model/kategori_barang_model.dart';
 import 'package:flutter_api/view/barang/kategoriBarang/add_kategori_barang.dart';
+import 'package:flutter_api/view/barang/kategoriBarang/edit_kategori_barang.dart';
 
 class KategoriBarang extends StatefulWidget {
   const KategoriBarang({super.key});
@@ -20,6 +21,7 @@ class _KategoriBarangState extends State<KategoriBarang> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    getKategoriBarang();
   }
 
   void getKategoriBarang() async {
@@ -42,8 +44,14 @@ class _KategoriBarangState extends State<KategoriBarang> {
           return Card(
             child: ListTile(
               title: Text(listKategoriBarang[index].nama),
-              trailing:
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+              trailing: IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EditKategoriBarang()));
+                  },
+                  icon: const Icon(Icons.edit)),
             ),
           );
         },
