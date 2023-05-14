@@ -1,3 +1,29 @@
+# API Flutter with Laravel
+
+## 1. GET DATA
+![Alt text](screenshot/Home.png)
+
+## 2. POST DATA
+![Alt text](screenshot/halamantambah.png)
+
+## 3. HASIL POST DATA
+![Alt text](screenshot/hasiltambah.png)
+
+## 4. PUT DATA
+![Alt text](screenshot/halamanedit.png)
+
+## 5. HASIL PUT DATA
+![Alt text](screenshot/hasiledit.png)
+
+## 6. DELETE DATA (Oli)
+![Alt text](screenshot/hapus.png)
+
+## 7. HASIL DELETE DATA
+![Alt text](screenshot/hasilhapus.png)
+![Alt text](screenshot/hasilhapus2.png)
+
+## Zahran Rafif-20200140073
+
 # flutter_api
 
 A new Flutter project.

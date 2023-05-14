@@ -83,8 +83,10 @@ class _KategoriBarangState extends State<KategoriBarang> {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AddKategoriBarang()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const AddKategoriBarang()));
         },
         child: const Icon(Icons.add),
       ),
