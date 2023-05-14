@@ -46,7 +46,7 @@ class KategoriBarangController {
     }
   }
 
-  Future updateKategoriBarang(String nama, int id) async {
+  Future updateKategoriBarang(int id, String nama) async {
     try {
       var result = await http.post(Uri.parse("${apiUrl}barang/update/$id"),
           body: {"nama_kategori_barang": nama});
