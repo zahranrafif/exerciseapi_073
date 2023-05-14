@@ -12,6 +12,37 @@ class EditKategoriBarang extends StatefulWidget {
 class _EditKategoriBarangState extends State<EditKategoriBarang> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var formkey = GlobalKey<FormState>();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Halaman Edit Kategori Barang'),
+      ),
+      body: Form(
+        key: formkey,
+        child: ListView(
+          padding: const EdgeInsets.all(16.0),
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Nama Kategori Barang',
+                labelText: 'Nama Kategori Barang',
+              ),
+              onChanged: (value) {},
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Nama Kategori is Required';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Update'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
