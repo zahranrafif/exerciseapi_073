@@ -52,7 +52,19 @@ class _KategoriBarangState extends State<KategoriBarang> {
                     icon: const Icon(Icons.edit),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      kategoriBarangController
+                          .deleteData(listKategoriBarang[index].id)
+                          .then((value) {
+                        setState(() {
+                          listKategoriBarang.removeAt(index);
+                        });
+                      });
+                      var snackBar = const SnackBar(
+                          content:
+                              Text('Data Kategori Barang Berhasil Dihapus'));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
                     icon: const Icon(Icons.delete, color: Colors.blue),
                   ),
                 ],
